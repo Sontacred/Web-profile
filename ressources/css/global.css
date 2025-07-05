@@ -1,0 +1,251 @@
+/* engloble les styles utilisés sur l'ensemble des pages HTML */
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: #101010;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    border: none;
+}
+
+a {
+    color: #000000;
+}
+
+/* HEADER ------------------------------------------------------------------------- \
+\ -------------------------------------------------------------------------------- */
+
+header {
+    position: fixed;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    padding: 0 2rem;
+    height: 120px;
+    width: 100vw;
+    z-index: 200;
+}
+
+.input-zone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home-btn {
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+    border-radius: 50px;
+    transition: 50ms;
+}
+
+.toggle-btn {
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    cursor: pointer;
+    margin-left: 14px;
+    height: 65px;
+    width: 65px;
+    border-radius: 50px;
+    transition: 50ms;
+}
+
+.action-btn {
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    padding: 0 20px;
+    height: 50px;
+    border-radius: 30px;
+    transition: 100ms;
+}
+
+#scaling:hover {
+    background: #FF5757;
+    color: #FFFFFF;
+    transition: 50ms;
+}
+
+#scaling:active {
+    scale: 0.92;
+    transition: 10ms;
+}
+
+/* Overlay flou plein écran */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    z-index: 50;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 100ms ease;
+}
+
+/* Quand le menu est ouvert */
+.overlay.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* DROPDOWN ----------------------------------------------------------------------- \
+\ -------------------------------------------------------------------------------- */
+
+.dropdown-menu{
+    background: none;
+    position: absolute;
+    overflow: hidden;
+    font-size: xx-large;
+    top: 120px; 
+    right: 2rem;
+    height: 0;
+    transition: 50ms;
+    z-index: 100;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.dropdown-menu.open{
+    height: fit-content;
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+}
+
+.menu-list a {
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    margin-left: 10px;
+    padding: 10px;
+    height: 150px;
+    width: 130px;
+    border-radius: 20px;
+    transition: 100ms;
+}
+
+.menu-list .item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.menu-list .item-content p {
+    font-size: xx-large;
+}
+
+/* SECTION ------------------------------------------------------------------------- \
+\ --------------------------------------------------------------------------------- */
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 140px 0.5rem 20px 0.5rem;
+}
+
+.diff-spacing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Allignement des div prédéfini : ROW / COLUMN */
+
+.row-align {
+    display: flex;
+    flex-direction: row;
+}
+
+.column-align {
+    display: flex;
+    flex-direction: column;
+}
+
+/* FOOTER ------------------------------------------------------------------------- \
+\ -------------------------------------------------------------------------------- */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    border-top: 1px solid #101010;
+}
+
+/* RESPONSIVE --------------------------------------------------------------------- \
+\ -------------------------------------------------------------------------------- */
+
+@media(max-width: 876px){
+
+    header {
+        padding: 0 1rem;
+    }
+
+      .dropdown-menu {
+        left: 2rem;
+        right: 2rem;
+        width: 1;
+    }
+
+    .menu-list {
+        flex-direction: row; /* Garder horizontal */
+        flex-wrap: wrap;     /* Permettre retour à la ligne */
+        justify-content: center;
+        gap: 10px; /* espacement entre les blocs */
+        width: 100%;
+    }
+
+    .menu-list a {
+        width: calc(50% - 10px); /* 2 éléments par ligne avec espace */
+        margin: 5px 0;
+    }
+
+    #bigger {
+        font-size: x-large;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V2</title>
+    <link rel="stylesheet" href="ressources/css/global.css">
+    <link rel="stylesheet" href="ressources/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <header>
+        <div class="input-zone">
+            <!-- <a href="#" class="home-btn" id="scaling">
+                <i class="fa-solid fa-house"></i>
+            </a> -->
+            <div class="toggle-btn" id="scaling">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu">
+            <div class="menu-list">
+                <a href="#" id="scaling">
+                    <div class="item-content">
+                        <p><i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                        Portfolio
+                    </div>
+                </a>
+                <a href="#" id="scaling">
+                    <div class="item-content">
+                        <p><i class="fa-solid fa-arrow-up-right-from-square"></i></p>
+                        Blog
+                    </div>
+                </a>
+                <a href="#" id="scaling">
+                    <div class="item-content">
+                        <p><i class="fa-regular fa-envelope"></i></p>
+                        Contact
+                    </div>
+                </a>
+                <a href="#" id="scaling">
+                    <div class="item-content">
+                        <p><i class="fa-solid fa-info"></i></p>
+                        Infos
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <section>
+        <!-- pages disponibles à visiter -->
+        <article class="pages-half" id="column-align">
+            <a href="/1-portfolio/portfolio.html">
+                <h1>Portfolio</h1>
+            </a>
+            <a href="/2-blog/blog.html">
+                <h1>Blog</h1>
+            </a>
+        </article>
+        
+        <!-- liens / icônes vers mes réseaux ou la page de contact (plus vers la page de contact) -->
+        <article class="social-half row-align">
+            <a href="#" class="row-align" id="scaling">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#" class="row-align" id="scaling">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="row-align" id="scaling">
+                <i class="fa-solid fa-address-card"></i>
+            </a>
+        </article>
+    </section>
+
+    <footer>
+        footer
+    </footer>
+
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+        const overlay = document.querySelector('.overlay')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.className = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-plus'
+
+            overlay.classList.toggle('visible', isOpen)
+        }
+
+        // Ferme le menu si on clique sur le flou
+        overlay.onclick = function () {
+            dropDownMenu.classList.remove('open')
+            overlay.classList.remove('visible')
+            toggleBtnIcon.className = 'fa-solid fa-plus'
+        }
+    </script>
+
+</body>
+
+</html>
