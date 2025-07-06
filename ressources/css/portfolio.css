@@ -138,8 +138,14 @@ article {
     }
 
     .left-resume{
-    margin-right: 0;
-    margin-bottom: 14px;
-}
+        margin-right: 0;
+        margin-bottom: 14px;
+    }
+
+    section {
+        padding: 120px 0.5rem 20px 0.5rem;
+    }
+
+
 
 }
