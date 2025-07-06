@@ -94,6 +94,7 @@ article {
     align-items: center;
     justify-content: right;
     margin: 10px 0;
+    width: 100%;
 }
 
 .link-btn a {
