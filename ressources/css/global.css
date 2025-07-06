@@ -182,7 +182,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 140px 0.5rem 20px 0.5rem;
 }
 
 .diff-spacing {
@@ -209,12 +208,22 @@ section {
 \ -------------------------------------------------------------------------------- */
 
 footer {
+    color: #FFFFFF;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    padding: 0 2rem;
     min-height: 60px;
     border-top: 1px solid #101010;
+}
+
+footer a {
+    color: #FFFFFF;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* RESPONSIVE --------------------------------------------------------------------- \
@@ -245,7 +254,17 @@ footer {
         margin: 5px 0;
     }
 
+    #scaling:hover {
+        background: #FFFFFF;
+        color: #101010;
+        transition: 50ms;
+    }
+
     #bigger {
         font-size: x-large;
+    }
+
+    footer {
+        padding: 0 1rem;
     }
 }

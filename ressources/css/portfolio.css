@@ -1,3 +1,126 @@
 /* ARTICLES ------------------------------------------------------------------------ \
 \ --------------------------------------------------------------------------------- */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
 
+section {
+    padding: 120px 2rem 20px 2rem;
+}
+
+article {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.content {
+    border-radius: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+.resume{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    text-align: left;
+}
+
+.left-resume{
+    background: #2d2d2d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 10px;
+    padding: 20px;
+    min-height: 600px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+.left-resume strong{
+    color: #D7D7D7;
+    font-size: x-large;
+}
+
+.left-resume p{
+    margin: 10px 0px;
+}
+
+.right-resume{
+    background: #2d2d2d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    min-height: 600px;
+    width: 100%;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+.resume-title{
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+.resume-educ{
+    padding: 10px;
+    border-top: 1px solid #FFFFFF;
+}
+
+.resume-educ h1{
+    color: #D7D7D7;
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+
+.resume-educ p{
+    margin-bottom: 20px;
+}
+
+.link-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    margin: 10px 0;
+}
+
+.link-btn a {
+    background: #FFFFFF;
+    font-size: x-large;
+    margin-top: 10px;
+    padding: 10px 16px;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+.skills {
+    background: #ff8957;
+}
+
+.project {
+    background: #ffca57;
+}
+
+.contact {
+    background: #fff957;
+}
