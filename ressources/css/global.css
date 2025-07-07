@@ -32,11 +32,34 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between; /* mettre RIGHT lorsque le site sera terminé et supprimer .construction */
     padding: 0 2rem;
     height: 120px;
     width: 100vw;
     z-index: 200;
+}
+
+.construction {
+    color: #FFDE59;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.construction p {
+    color: #FFDE59;
+}
+
+.construction a {
+    color: #FFDE59;
+    text-decoration: underline;
+    font-size: x-large;
+}
+
+.construction a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
 }
 
 .input-zone {
